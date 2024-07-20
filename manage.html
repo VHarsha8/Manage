@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Hamburger Menu</title>
+  <link rel="stylesheet" href="styles/style.css">
+  
+</head>
+<body class="bg-gray-100 md:bg-slate-800">
+  <nav class="p-4 bg-white shadow-md md:bg-transparent md:shadow-none">
+    <div class="container flex items-center justify-between mx-auto">
+      <div class="text-xl font-bold text-white">Manage</div>
+      <div class="flex items-center justify-center gap-8 text-white text-md font-poppins">
+        <h1>Home </h1>
+        <h1>About </h1>
+        <h1>Services </h1>
+        <h1>Contact </h1>
+        <h1>Portfolio</h1>
+      </div>
+      <a href="#" class="px-4 py-2 font-medium text-white border rounded-full font-poppins text-md border-violet-900">Get started</a>
+      <div class="md:hidden">
+        <div id="hamburger" class="space-y-2 cursor-pointer hamburger">
+          <div class="rounded-lg bar1"></div>
+          <div class="rounded-lg bar2"></div>
+   
+          
+        </div>
+      </div>
+      <ul id="menu" class="fixed inset-0 flex flex-col items-center justify-center space-y-6 bg-violet-950 -z-50 menu">
+        <li><a href="#" class="text-3xl font-semibold text-white md:text-black hover:text-gray-800">Home</a></li>
+        <li><a href="#" class="text-3xl font-semibold text-white hover:text-gray-800">About</a></li>
+        <li><a href="#" class="text-3xl font-semibold text-white hover:text-gray-800">Services</a></li>
+        <li><a href="#" class="text-3xl font-semibold text-white hover:text-gray-800">Contact</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
